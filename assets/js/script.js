@@ -56,6 +56,7 @@ class Dados {
         this.nome = nome;
         this.telefone = telefone;
         this.celular = celular;
+        this.img = img;
         this.data = data;
         this.email = email;
         this.cep = cep;
@@ -182,22 +183,21 @@ function renderizarConteudo() {
     array.forEach(pessoa => {
 
         const dadosDiv = `
-            <div class='detalhes'>
-                <img src="${pessoa.imgLink} alt="${pessoa.nome}">
-                <p>${pessoa.nome}</p>
-                <p>Telefone:${pessoa.telefone}</p>
-                <p>Celular:${pessoa.celular}</p>
-                <p>Data:de nascimento:${pessoa.data}</p>
-                <p>Idade:${pessoa.age} anos</p>
-                <p>Signo:${pessoa.zodiacSign}</p>
-                <p>Email:${pessoa.email}</p>
-                <p>CEP:${pessoa.cep}</p>
-                <p>Cidade:${pessoa.cidade}</p>
-                <p>Instagram:${pessoa.instagram}</p>
-                <p>Github:${pessoa.github}</p>
-            </div>  
+        <div class='detalhes'>
+        <img src="${pessoa.img} alt="${pessoa.nome}">
+        <p>${pessoa.nome}</p>
+        <p>Telefone Fixo:${pessoa.telefone}</p>
+        <p>Telefone Celular:${pessoa.celular}</p>
+        <p>Data:de nascimento:${pessoa.data}</p>
+        <p>Idade:${pessoa.age} anos</p>
+        <p>Signo:${pessoa.zodiacSign}</p>
+        <p>Email:${pessoa.email}</p>
+        <p>CEP:${pessoa.cep}</p>
+        <p>Cidade:${pessoa.cidade}</p>
+        <p>Instagram:${pessoa.instagram}</p>
+        <p>Github:${pessoa.github}</p>
+    </div> 
        `;
-
         listaHTML.innerHTML += dadosDiv;
     });
 }
@@ -221,3 +221,7 @@ function isAnyInputEmpty() {
         return false;
     }
 }
+
+
+
+

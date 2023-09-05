@@ -40,10 +40,16 @@
                 <mxCell id="20" value="&lt;span style=&quot;&quot;&gt;+ add(sechedule): string&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#f1f9f7;" parent="21" vertex="1">
                     <mxGeometry x="10" y="120" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" style="edgeStyle=none;html=1;fontColor=#f1f9f7;endArrow=diamondThin;endFill=1;strokeWidth=2;" parent="1" source="3" edge="1">
+                <mxCell id="23" style="edgeStyle=none;html=1;endArrow=diamond;endFill=0;" edge="1" parent="1" source="17">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="560" y="200" as="targetPoint"/>
+                        <mxPoint x="360" y="210" as="targetPoint"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="1..*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="180" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="1..*" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="510" y="210" width="60" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

@@ -58,7 +58,7 @@ button:hover{
     margin-bottom: 20px;
     height:  40vh;
     margin-right: 10%; 
-    margin-left: 23%;
+    margin-left: 62%;
     box-shadow: 5px 10px 15px #cfd6ef;
     width: 55%;
     height: 70%;
@@ -70,4 +70,8 @@ button:hover{
     flex-direction: column; 
     justify-content: baseline;
     width: 55%;
+}
+img{
+    width: 240px;
+    height: 140px;
 }
