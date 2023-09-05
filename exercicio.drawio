@@ -1,0 +1,51 @@
+<mxfile host="65bd71144e">
+    <diagram id="JhpgWgQdlCk20f6J7Moz" name="Página-1">
+        <mxGraphModel dx="832" dy="576" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="9" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="40" y="50" width="320" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="9" vertex="1">
+                    <mxGeometry width="320" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="9" vertex="1">
+                    <mxGeometry y="60" width="320" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font color=&quot;#f1f9f7&quot;&gt;Dados&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="9" vertex="1">
+                    <mxGeometry x="100" y="10" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="- nome: string&lt;br&gt;- teledone : integer&lt;br&gt;- celular: integer&lt;br&gt;- img: link&lt;br&gt;- data: integer&lt;br&gt;- email: string&lt;br&gt;- cep: integer&lt;br&gt;- cidade: string&lt;br&gt;- instagram: string&lt;br&gt;- github: string" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#f1f9f7;" parent="9" vertex="1">
+                    <mxGeometry x="20" y="115" width="250" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="+ getZodiacSign(): string&lt;br&gt;+ calculateAge(): integer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#f1f9f7;" parent="9" vertex="1">
+                    <mxGeometry x="20" y="250" width="200" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="560" y="130" width="240" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#f1f9f7;" parent="21" vertex="1">
+                    <mxGeometry width="240" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#f1f9f7;" parent="21" vertex="1">
+                    <mxGeometry y="50" width="240" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="ListaPessoas" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;fontColor=#f1f9f7;" parent="21" vertex="1">
+                    <mxGeometry x="60" y="10" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;span style=&quot;&quot;&gt;- listapessoas: string [ ]&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#f1f9f7;" parent="21" vertex="1">
+                    <mxGeometry x="10" y="65" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;span style=&quot;&quot;&gt;+ add(sechedule): string&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#f1f9f7;" parent="21" vertex="1">
+                    <mxGeometry x="10" y="120" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;fontColor=#f1f9f7;endArrow=diamondThin;endFill=1;strokeWidth=2;" parent="1" source="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="560" y="200" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
