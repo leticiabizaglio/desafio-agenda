@@ -65,6 +65,8 @@ class Dados {
         this.github = github;
         this.age = this.calculateAge(data);
         this.zodiacSign = this.getZodiacSign();
+        this.id = this.getId();
+       
     }
     calculateAge(data) {
         console.log("Passou pelo calculateAge() da class Dados");
@@ -111,6 +113,12 @@ class Dados {
             return "Sagitário ♐";
         }
     }
+
+    getId(){
+        const num = (Math.random()* 9999);
+        return num;
+    }
+
 }
 
 const Teste = new Dados("Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste");
@@ -128,8 +136,6 @@ function adicionar() {
     instagram = document.getElementById("instagram").value;
     github = document.getElementById("github").value;
 
-    let datacorreta = data.split('-');
-    let datainvert = datacorreta.reverse().join('/');
 
     const pessoa = new Dados(nome, telefone, celular, img, data, email, cep, cidade, instagram, github);
     console.log(pessoa);
@@ -139,7 +145,7 @@ function adicionar() {
 
 function envieMsg(msg, tipo) {
     let msgDiv = document.getElementById("msg");
-    msgDiv.innerHTML = "";
+    msgDiv.innerHTML = '';
 
     let msgParaTela = `
     <p class='${tipo}'>${msg}</p>
@@ -165,6 +171,10 @@ class ListaPessoas {
             console.log(this.listapessoas);
         }
     }
+    getNumeruzinho(num){
+        return this.listapessoas.find((pessoa) => pessoa.id === num);
+    }
+    
 }
 const contatos = new ListaPessoas();
 console.log(contatos);
@@ -183,20 +193,12 @@ function renderizarConteudo() {
     array.forEach(pessoa => {
 
         const dadosDiv = `
-        <div class='detalhes'>
-        <img src="${pessoa.img} alt="${pessoa.nome}">
-        <p>${pessoa.nome}</p>
-        <p>Telefone Fixo:${pessoa.telefone}</p>
-        <p>Telefone Celular:${pessoa.celular}</p>
-        <p>Data:de nascimento:${pessoa.data}</p>
-        <p>Idade:${pessoa.age} anos</p>
-        <p>Signo:${pessoa.zodiacSign}</p>
-        <p>Email:${pessoa.email}</p>
-        <p>CEP:${pessoa.cep}</p>
-        <p>Cidade:${pessoa.cidade}</p>
-        <p>Instagram:${pessoa.instagram}</p>
-        <p>Github:${pessoa.github}</p>
-    </div> 
+            <div class='detalhes' onclick="mostrar(${pessoa.id})">
+                <img src="${pessoa.img} alt="${pessoa.nome}">
+                <h1>${pessoa.nome}</h1>
+                <p>Telefone Fixo:${pessoa.telefone}</p>
+                <p>Telefone Celular:${pessoa.celular}</p>
+            </div>  
        `;
         listaHTML.innerHTML += dadosDiv;
     });
@@ -222,6 +224,33 @@ function isAnyInputEmpty() {
     }
 }
 
+function dataCerta(data){
+    let datacorreta = data.split('-');
+    let datainvert = datacorreta.reverse().join('/');
+    return datainvert
+}
 
+function mostrar(num){
+    document.getElementById("lateral").classList.remove("hidden");
+    const pessoa = contatos.getNumeruzinho(num);
+    let html =`
+    <p id="so">Detalhe</p>
+    <img src="${pessoa.img} alt="${pessoa.nome}" id="imgzinha">
+    <h1>${pessoa.nome}</h1>
+    <p>Identificador:${pessoa.id}</p>
+    <p>Telefone Fixo:${pessoa.telefone}</p>
+    <p>Telefone Celular:${pessoa.celular}</p>
+    <p>Data:de nascimento:${dataCerta(pessoa.data)}</p>
+    <p>Idade:${pessoa.age} anos</p>
+    <p>Signo:${pessoa.zodiacSign}</p>
+    <p>Email:${pessoa.email}</p>
+    <p>CEP:${pessoa.cep}</p>
+    <p>Cidade:${pessoa.cidade}</p>
+    <p>Instagram:${pessoa.instagram}</p>
+    <p>Github:${pessoa.github}</p>`;
+
+    document.getElementById("lateral").innerHTML = html;
+    console.log(num);
+}
 
 
